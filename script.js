@@ -385,7 +385,7 @@ function showSecretMessage() {
 
   const message = document.createElement("div");
   message.className = "secret-message";
-  message.innerHTML = `<img src="assets/easter-eggs/smile-meme.png" alt="Hello, hope I made you smile meme">`;
+  message.innerHTML = `<img src="smile-meme.png" alt="Hello, hope I made you smile meme">`;
   document.body.appendChild(message);
 
   window.setTimeout(() => message.classList.add("show"), 20);
