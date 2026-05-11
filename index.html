@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Mother's Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800;900&family=Pacifico&family=Patrick+Hand&family=Shrikhand&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-decor" aria-hidden="true">
+      <span class="decor-dolphin decor-dolphin-one"></span>
+      <span class="decor-dolphin decor-dolphin-two"></span>
+      <span class="decor-flower decor-flower-one"></span>
+      <span class="decor-flower decor-flower-two"></span>
+      <span class="decor-coral decor-coral-one"></span>
+      <span class="decor-coral decor-coral-two"></span>
+      <span class="decor-coral decor-coral-three"></span>
+      <span class="decor-seaweed decor-seaweed-one"></span>
+      <span class="decor-seaweed decor-seaweed-two"></span>
+      <span class="decor-seaweed decor-seaweed-three"></span>
+      <span class="decor-bubble decor-bubble-one"></span>
+      <span class="decor-bubble decor-bubble-two"></span>
+      <span class="decor-bubble decor-bubble-three"></span>
+      <span class="decor-bubble decor-bubble-four"></span>
+      <span class="decor-bubble decor-bubble-five"></span>
+      <span class="decor-flower decor-flower-three"></span>
+      <span class="decor-flower decor-flower-four"></span>
+    </div>
+
+    <div class="surprise" id="surprise">
+      <div class="surprise-sky">
+        <div class="sun"></div>
+        <div class="wave wave-one"></div>
+        <div class="wave wave-two"></div>
+        <button class="dolphin-card" id="revealButton" type="button" aria-label="Reveal the Mother's Day surprise">
+          <svg class="dolphin" viewBox="0 0 420 240" role="img" aria-label="Dolphin clipart">
+            <path d="M65 132c50-52 126-78 223-57 19-25 47-42 87-47-8 25-24 45-47 60 22 8 39 21 52 39-40 2-74-5-102-20-25 26-57 43-96 51l22 42-57-33c-22 1-44-1-67-5 19-11 33-21 43-32-24-4-43-3-58 2z" />
+            <path class="dolphin-belly" d="M109 139c54 13 112 11 172-31-20 28-48 48-84 59-35 10-65 1-88-28z" />
+            <circle cx="282" cy="80" r="7" />
+          </svg>
+          <span>Happy Mother's Day!</span>
+          <strong>Click here to reveal the surprise</strong>
+        </button>
+      </div>
+    </div>
+
+    <canvas id="confetti" aria-hidden="true"></canvas>
+
+    <button class="secret-dolphin" id="secretDolphin" type="button" aria-label="Open a secret dolphin message">
+      <span></span>
+    </button>
+
+    <header class="hero">
+      <nav class="topbar" aria-label="Page sections">
+        <a href="#gratitude">Reasons Why</a>
+        <a href="#playlist">Just for You</a>
+        <a href="#memories">Memory Lane</a>
+      </nav>
+      <div class="hero-content">
+        <p class="eyebrow">Mother's Day 2026</p>
+        <h1>Happy Mother's Day, Mommy!!</h1>
+        <p class="hero-copy">I love you so much and I'm sorry I couldn't be home to celebrate with you. I hope this makes it up a little &lt;3</p>
+        <div class="hero-actions">
+          <button class="button secondary" id="confettiButton" type="button">YAY CONFETTI</button>
+        </div>
+      </div>
+      <div class="hero-photo" aria-label="Family memory photo">
+        <img src="assets/hero/ocean-family.JPG" alt="Family smiling together on the ocean" />
+      </div>
+    </header>
+
+    <main>
+      <section class="section generator-section" id="gratitude">
+        <div class="section-heading">
+          <p class="eyebrow">Tap for Something Sweet</p>
+          <h2>SUPER AWESOME RANDOM GENERATORS</h2>
+        </div>
+        <div class="generator-grid">
+          <article class="generator-panel mom-panel">
+            <span class="panel-icon">Mom</span>
+            <p class="eyebrow">Take your pick of a Mommy line</p>
+            <h3>Press for a classic</h3>
+            <p class="generator-bio">I still hear you say these in the back of my head</p>
+            <p id="momism" class="generator-output">"Did you clean your room? You'll feel better!"</p>
+            <button class="button primary pop-button" id="momismButton" type="button">New mom-ism</button>
+          </article>
+
+          <article class="generator-panel love-panel">
+            <span class="panel-icon">Love</span>
+            <p class="eyebrow">Just a few of the reasons I love you</p>
+            <h3>Press for love</h3>
+            <p id="reasonOutput" class="generator-output">You shop & grow fresh produce to keep us healthy</p>
+            <button class="button secondary pop-button" id="reasonButton" type="button">New reason why</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section dashboard" id="playlist">
+        <div class="section-heading">
+          <p class="eyebrow">Just for You</p>
+          <h2>Mommy's Top Hits</h2>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="playlist panel">
+            <h3>Songs that remind me of you</h3>
+            <div class="song-player" id="songPlayer" aria-live="polite">
+              <div class="player-cover" id="playerCover" aria-hidden="true">play</div>
+              <div class="player-copy">
+                <p id="playerStatus">Click a song to play a little preview</p>
+                <strong id="playerTitle">Mommy soundtrack loading dock</strong>
+                <small id="playerArtist">Pick any album tile below</small>
+              </div>
+              <audio id="audioPlayer" controls preload="none"></audio>
+            </div>
+            <div class="song-list" id="songs"></div>
+          </article>
+
+          <article class="recipes panel">
+            <h3>Top Hits Meals I Miss</h3>
+            <div class="recipe-list" id="recipes"></div>
+          </article>
+
+          <article class="adventures panel">
+            <h3>Summer Adventures I'm Looking Forward To</h3>
+            <div class="adventure-list" id="adventures"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section ocean-band" id="memories">
+        <div class="section-heading">
+          <p class="eyebrow">Digital Memory Lane</p>
+          <h2>Some of my fav memories</h2>
+        </div>
+        <div class="gallery" id="gallery" aria-live="polite"></div>
+      </section>
+
+      <section class="section finale" id="finale">
+        <div class="finale-shell">
+          <p>There is one more surprise waiting at the bottom of the ocean.</p>
+          <button class="button primary finale-button" id="finaleButton" type="button">One more surprise</button>
+        </div>
+      </section>
+
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="closeLightbox" type="button" aria-label="Close memory">x</button>
+      <div class="lightbox-media" id="lightboxMedia"></div>
+    </div>
+
+    <div class="letter-modal" id="letterModal" aria-hidden="true">
+      <div class="letter-card" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+        <button class="letter-close" id="closeLetter" type="button" aria-label="Close letter">x</button>
+        <p class="eyebrow">Secret Message</p>
+        <h2 id="letterTitle">Dear Mommy,</h2>
+        <div class="letter-body">
+          <p>Happy Mother's Day! I feel really bad that I didn't make it home this weekend but I hope you know I was thinking about you the entire time.</p>
+          <p>I'm so grateful for all the values and lessons you've instilled in me. And I don't say this enough but you've always been someone I've looked up to as a role model for doing it all. You balance being a mom, having a successful career, showing up for your friends, students, teachers, parents, etc., all while protecting your passions for cooking, gardening, and leading our family. It's inspired me to never have to be one thing either. In high school, you inspired me to balance school with sports. But since coming to college, I've actualized so many more of your lessons that I'd subconsciously picked up from your strength over the years: how to be strong but still kind and true-to-myself in male spaces, the elegance of kindness, the importance of the people around me and their influence, the power of being the bigger person even when it feels like you're being taken advantage of, the comfort of a <em>clean</em> home to come back to (who knew), the strength of a loving support system, and so many more that I probably just haven't realized yet.</p>
+          <p>In fact, this time apart has made me excited to come back home for the summer and have home-cooked meals again (automatic request for gyros please!!) and movie nights that you and I will probably fall asleep to ;)</p>
+          <p>I love you so much and I hope you had an amazing Mother's Day!</p>
+          <p>Love,<br>Ash</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Made with love from Ashlyn Website Co.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
