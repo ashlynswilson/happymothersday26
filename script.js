@@ -1,16 +1,16 @@
 const photoCount = 59;
 const videos = [
   {
-    src: "assets/videos/IMG_0716.mov",
-    thumb: "assets/video-thumbs/video-1.jpg"
+    src: "IMG_0716.mov",
+    thumb: "video-1.jpg"
   },
   {
-    src: "assets/videos/IMG_0749.mov",
-    thumb: "assets/video-thumbs/video-2.jpg"
+    src: "IMG_0749.mov",
+    thumb: "video-2.jpg"
   },
   {
-    src: "assets/videos/IMG_1195.mov",
-    thumb: "assets/video-thumbs/video-3.jpg"
+    src: "IMG_1195.mov",
+    thumb: "video-3.jpg"
   }
 ];
 
